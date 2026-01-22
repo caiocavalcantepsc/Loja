@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH GLOBAL - Loja de Importados Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <div class="container header-container hidden-blurless">
+            <a href="#" class="logo">
+                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="TECH GLOBAL">
+                TECH GLOBAL
+            </a>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato-rapido">Contato</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#vip">Clube Premium</a></li>
+                </ul>
+            </nav>
+
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner-principal" id="inicio">
+        <div class="container">
+            <div class="banner-conteudo-hero hidden-blurless">
+                <h1>TECH GLOBAL</h1>
+                <p>Tecnologia de Ponta com Garantia Internacional</p>
+                <a href="#produtos" class="btn btn-destaque">Ver Catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Rápido -->
+    <section class="contato-rapido" id="contato-rapido">
+        <div class="container">
+            <div class="titulo-secao hidden">
+                <h2>Fale Conosco de Acordo com sua Necessidade</h2>
+            </div>
+
+            <div class="contato-grid hidden">
+                <div class="contato-card">
+                    <div class="contato-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Vendas</h3>
+                    <p>Mariana Costa</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5575998311915&text&type=phone_number&app_absent=0"
+                        class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar Agora
+                    </a>
+                </div>
+
+                <div class="contato-card">
+                    <div class="contato-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte</h3>
+                    <p>Ricardo Silva</p>
+                    <a href="https://api.whatsapp.com/send?phone=5575998565653" class="btn btn-whatsapp"
+                        target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar Agora
+                    </a>
+                </div>
+
+                <div class="contato-card">
+                    <div class="contato-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Técnico</h3>
+                    <p>Carlos Mendes</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5575998119374&text&type=phone_number&app_absent=0"
+                        class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar Agora
+                    </a>
+                </div>
+
+                <div class="contato-card">
+                    <div class="contato-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Assistência</h3>
+                    <p>Fernando Santos</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5575997101281&text&type=phone_number&app_absent=0"
+                        class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar Agora
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <section class="vitrine-produtos" id="produtos">
+        <div class="container">
+            <div class="titulo-secao hidden-blurless">
+                <h2>Mais Vendidos</h2>
+            </div>
+
+            <div class="produtos-grid">
+                <!-- iPhone 15 Pro Max -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <div class="produto-imagem-placeholder" style="background-color: #000;">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="produto-foto" alt="Smartphone premium">
+                            <span>Smartphone</span>
+                        </div>
+                    </div><hr>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Smartphone Pro Max</h3>
+                        <p class="produto-descricao">256GB, Titânio, Câmera 48MP</p>
+                        <div class="produto-categoria">Premium</div>
+
+                        <div class="produto-precos">
+                            <span class="produto-preco-atual">R$ 7.899,90</span>
+                            <span class="produto-preco-original">R$ 8.999,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xiaomi 14 Ultra -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <div class="produto-imagem-placeholder" style="background-color: #000;">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="produto-foto" alt="Smartphone com câmera avançada">
+                            <span>Android</span>
+                        </div>
+                    </div><hr>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Android Ultra 14</h3>
+                        <p class="produto-descricao">512GB, 16GB RAM, Câmera Quad</p>
+                        <div class="produto-categoria">Android</div>
+
+                        <div class="produto-precos">
+                            <span class="produto-preco-atual">R$ 6.299,90</span>
+                            <span class="produto-preco-original">R$ 6.999,90</span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <!-- Xiaomi Redmi Note 13 Pro -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <div class="produto-imagem-placeholder" style="background-color: #000;">
+                            <img src="https://images.unsplash.com/photo-1546054451-aa0a1d4c8c7f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="produto-foto" alt="Smartphone intermediário">
+                            <span>Mid-Range</span>
+                        </div>
+                    </div><hr>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Smartphone Note Pro</h3>
+                        <p class="produto-descricao">256GB, 200MP câmera, Processador</p>
+                        <div class="produto-categoria">Intermediário</div>
+
+                        <div class="produto-precos">
+                            <span class="produto-preco-atual">R$ 2.499,90</span>
+                            <span class="produto-preco-original">R$ 2.899,90</span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Xiaomi Poco X6 Pro -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <div class="produto-imagem-placeholder" style="background-color: #000;">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="produto-foto" alt="Smartphone gamer">
+                            <span>Gamer</span>
+                        </div>
+                    </div><hr>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Smartphone Gamer Pro</h3>
+                        <p class="produto-descricao">256GB, Processador Gamer</p>
+                        <div class="produto-categoria">Gamer</div>
+
+                        <div class="produto-precos">
+                            <span class="produto-preco-atual">R$ 2.199,90</span>
+                            <span class="produto-preco-original">R$ 2.599,90</span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- AirPods Pro 2 -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+
+                        <div class="produto-imagem-placeholder" style="background-color: #000;">
+                            <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="produto-foto" alt="Fones de ouvido sem fio">
+                            <span>Áudio</span>
+                        </div>
+                    </div><hr>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Fones Pro 2</h3>
+                        <p class="produto-descricao">Cancelamento ativo de ruído</p>
+                        <div class="produto-categoria">Acessórios</div>
+
+                        <div class="produto-precos">
+                            <span class="produto-preco-atual">R$ 1.299,90</span>
+                            <span class="produto-preco-original">R$ 1.499,90</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Carregador MagSafe -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <div class="produto-imagem-placeholder" style="background-color: #000;">
+                            <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="produto-foto" alt="Carregador sem fio">
+                            <span>Carregador</span>
+                        </div>
+                    </div><hr> 
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Carregador Sem Fio</h3>
+                        <p class="produto-descricao">Carregamento rápido 15W</p>
+                        <div class="produto-categoria">Acessórios</div>
+
+                        <div class="produto-precos">
+                            <span class="produto-preco-atual">R$ 299,90</span>
+                            <span class="produto-preco-original">R$ 399,90</span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#vip" class="btn btn-outline hidden-blurless">Ver Mais Ofertas no Clube Premium</a>
+            </div>
+    </section>
+
+    <!-- Grupo VIP -->
+    <section class="grupo-vip" id="vip">
+        <div class="container">
+            <div class="vip-conteudo hidden-blurless">
+                <h2>Clube Premium de Ofertas</h2>
+                <p>Entre para nosso clube exclusivo e receba ofertas especiais antes de todo mundo!</p>
+
+                <div class="beneficios-vip">
+                    <div class="beneficio">
+                        <i class="fas fa-percentage"></i>
+                        <p>Descontos Exclusivos</p>
+                    </div>
+                    <div class="beneficio">
+                        <i class="fas fa-bolt"></i>
+                        <p>Promoções Relâmpago</p>
+                    </div>
+                    <div class="beneficio">
+                        <i class="fas fa-gift"></i>
+                        <p>Sorteios Semanais</p>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="btn btn-whatsapp" target="_blank" style="font-size: 1.1rem; padding: 15px 40px;">
+                    <i class="fab fa-whatsapp"></i> Entrar no Clube Premium
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="localizacao" id="localizacao">
+        <div class="container hidden">
+            <div class="titulo-secao">
+                <h2>Nossa Localização</h2>
+            </div>
+
+            <div class="mapa-container">
+                <div class="mapa-info">
+                    <h3>Venha nos visitar</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. das Tecnologias, 1500 - Centro Digital, São Paulo - SP</p>
+                    <p><i class="fas fa-clock"></i> Segunda a Sexta: 9h às 18h | Sábado: 9h às 13h</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                </div>
+
+                <div class="mapa-frame">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197345238651!2d-46.65906982477813!3d-23.561354861816427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710867756533!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Sociais -->
+    <section class="redes-sociais">
+        <div class="container hidden-blurless">
+            <h3>Siga-nos nas Redes Sociais</h3>
+            <div class="redes-links">
+                <a href="#"
+                    class="rede-social instagram" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="rede-social tiktok" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="rede-social facebook" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <p>Fique por dentro das novidades e promoções</p>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container hidden">
+            <h3>Receba Nossas Ofertas</h3>
+            <p>Cadastre-se e receba as melhores promoções diretamente no seu e-mail</p>
+
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Seu melhor e-mail" required aria-label="Email para newsletter">
+                <button type="submit" class="btn">Inscrever-se</button>
+            </form>
+            <p style="font-size: 0.8rem; margin-top: 15px;">Prometemos não enviar spam. Você pode cancelar a qualquer
+                momento.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col hidden">
+                    <h3>TECH GLOBAL</h3>
+                    <p>Tecnologia importada com qualidade e garantia internacional.</p>
+                </div>
+
+                <div class="footer-col hidden">
+                    <h3>Categorias</h3>
+                    <a href="#produtos">Smartphones</a>
+                    <a href="#produtos">Tablets</a>
+                    <a href="#produtos">Acessórios</a>
+                    <a href="#produtos">Fones</a>
+                    <a href="#produtos">Carregadores</a>
+                </div>
+
+                <div class="footer-col hidden">
+                    <h3>Links Rápidos</h3>
+                    <a href="#inicio">Início</a>
+                    <a href="#produtos">Produtos</a>
+                    <a href="#contato-rapido">Contato</a>
+                    <a href="#localizacao">Localização</a>
+                    <a href="#vip">Clube Premium</a>
+                </div>
+
+                <div class="footer-col hidden">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. das Tecnologias, 1500 - Centro Digital, São Paulo - SP</p>
+                    <p><i class="fas fa-envelope"></i> contato@techglobal.com</p>
+                </div>
+            </div>
+
+            <div class="copyright hidden-blurless">
+                <p>&copy; 2023 TECH GLOBAL. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-99</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrinho de Compras -->
+    <div class="carrinho-overlay" id="carrinhoOverlay">
+        <div class="carrinho-sidebar">
+            <div class="carrinho-header">
+                <h3>Seu Carrinho</h3>
+                <div class="close-carrinho" id="closeCarrinho">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="carrinho-items" id="carrinhoItems">
+                <!-- Itens do carrinho serão inseridos via JavaScript -->
+            </div>
+
+            <div class="carrinho-total">
+                <span>Total:</span>
+                <span id="carrinhoTotal">R$ 0,00</span>
+            </div>
+
+            <button class="btn btn-outline" style="width: 100%;">Finalizar Compra</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

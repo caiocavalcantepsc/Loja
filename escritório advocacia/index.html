@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Escritório de Advocacia especializado em Direito Civil, Trabalhista e Empresarial. Consultoria jurídica personalizada e soluções eficientes.">
+    <title>Advocacia & Associados | Escritório de Advocacia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="media/favcon.ico">
+    <style>
+        /* Estilos adicionais para as ondas SVG */
+        .wave-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-top {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            z-index: 1;
+        }
+        
+        .wave-bottom {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            z-index: 1;
+            transform: rotate(180deg);
+        }
+        
+        .wave-top svg,
+        .wave-bottom svg {
+            display: block;
+            width: 100%;
+            height: 80px;
+        }
+        
+        @media (min-width: 768px) {
+            .wave-top svg,
+            .wave-bottom svg {
+                height: 120px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .wave-top svg,
+            .wave-bottom svg {
+                height: 150px;
+            }
+        }
+        
+        /* Ajustes para as seções com ondas */
+        .practice-areas,
+        .cases,
+        .contact {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .practice-areas .wave-top svg,
+        .cases .wave-top svg,
+        .contact .wave-top svg {
+            fill: var(--surface-color);
+        }
+        
+        .team .wave-bottom svg {
+            fill: var(--surface-light);
+        }
+        
+        /* Hero section com onda */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%231a1a1a'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transform: rotate(180deg);  
+            transform-origin: center;   
+        }
+        
+        @media (min-width: 768px) {
+            .hero::after {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <span href="index.html" class="logo">
+                <img src="media/logo (1).png" style="width: 100px; height: 100px; margin-left: 200px;" alt="">
+            </span>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                <li class="dropdown">
+                    <a href="#areas" class="nav-link">Áreas de Atuação <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#civil">Direito Civil</a></li>
+                        <li><a href="#trabalhista">Direito Trabalhista</a></li>
+                        <li><a href="#empresarial">Direito Empresarial</a></li>
+                        <li><a href="#imobiliario">Direito Imobiliário</a></li>
+                        <li><a href="#digital">Direito Digital</a></li>
+                    </ul>
+                </li>
+                <li><a href="#equipe" class="nav-link">Equipe</a></li>
+                <li><a href="#cases" class="nav-link">Cases</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <!-- <li><a href="#contato" class="nav-link contact-btn">Contato</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h5 class="hero-primeiro-titulo">SEJA BEM VINDO AO</h5>
+                <h1>Almeida & Torres <br><span>Advocacia</span></h1>
+                <a href="#contato" class=" contact-btn">Falar direto pelo Whatsapp</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section class="practice-areas" id="areas">
+        <!-- Onda superior -->
+        <div class="wave-top">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="section-header-area">
+                <h2>Em quais áreas nos atuamos</h2>
+                <p>Especialização multidisciplinar para atender suas necessidades jurídicas</p>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Direito Civil</h3>
+                    <p>Contratos, responsabilidade civil, indenizações, questões familiares e sucessórias.</p>
+                    <a href="#civil" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Assessoria para empresas e trabalhadores em questões contratuais e processos trabalhistas.</p>
+                    <a href="#trabalhista" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Direito Empresarial</h3>
+                    <p>Constituição de empresas, fusões, aquisições, compliance e contratos empresariais.</p>
+                    <a href="#empresarial" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Direito Imobiliário</h3>
+                    <p>Compra e venda, usucapião, regularização, condomínios e questões locatícias.</p>
+                    <a href="#imobiliario" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Onda inferior -->
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-intro">
+                        <span class="section-subtitle">Nossa História</span>
+                        <h2 class="section-title">Sobre Nós</h2>
+                    </div>
+
+                    <div class="about-text">
+                        <p class="lead-paragraph">Com mais de 20 anos de atuação desde sua fundação em 2002, nosso
+                            escritório consolidou-se como referência em advocacia consultiva e contenciosa.</p>
+
+                        <p>Unimos tradição jurídica e inovação tecnológica para oferecer soluções completas. Nossa
+                            equipe especializada, formada em instituições de excelência, aplica expertise acumulada em
+                            milhares de casos para desenvolver estratégias personalizadas com foco em resultados
+                            concretos para cada cliente.</p>
+
+                        <div class="achievements-grid">
+                            <div class="achievement-item">
+                                <div class="achievement-number">20+</div>
+                                <div class="achievement-text">Anos de Experiência</div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-number">100%</div>
+                                <div class="achievement-text">Dedicação ao Cliente</div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-number">+2500</div>
+                                <div class="achievement-text">Casos Atendidos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlyZWl0b3xlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Escritório de advocacia com estátua da justiça" class="featured-image">
+
+                        <div class="image-overlay">
+                            <div class="overlay-badge">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Desde 2002</span>
+                            </div>
+                        </div>
+
+                        <div class="decoration-shape shape-1"></div>
+                        <div class="decoration-shape shape-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="team" id="equipe">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Equipe</h2>
+                <p>Profissionais qualificados e comprometidos com a excelência</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://media.istockphoto.com/id/2235903620/pt/foto/happy-50-years-old-business-man-in-suit-standing-in-office-headshot-portrait.webp?a=1&b=1&s=612x612&w=0&k=20&c=4xnQAiXq4BK0vTzKgaSPORqvb3X081XgbZP2yIho-D4="
+                            alt="Dr. Rodrigo Silva">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Dr. Rodrigo Silva</h3>
+                        <p class="team-role">Sócio Fundador - OAB/SP 156.823</p>
+                        <p class="team-desc">Especialista em Direito Civil e Empresarial com mais de 20 anos de
+                            experiência. Mestre em Direito pela USP.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://media.istockphoto.com/id/2221972873/pt/foto/portrait-lawyer-or-black-woman-in-office-with-arms-crossed-for-advocate-confidence-or-practice.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZxBy5ppYdtte3CV98X9V4RiLsr3_BonhGQfwLwAFowE="
+                            alt="Dra. Ana Santos">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Dra. Ana Santos</h3>
+                        <p class="team-role">Sócia - OAB/SP 287.415</p>
+                        <p class="team-desc">Especialista em Direito Trabalhista e Previdenciário. Pós-graduada em
+                            Direito do Trabalho pela FGV.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="Dr. Marcos Oliveira">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Dr. Marcos Oliveira</h3>
+                        <p class="team-role">Advogado - OAB/SP 342.769</p>
+                        <p class="team-desc">Especialista em Direito Imobiliário e Contratos. Graduado com honras pela
+                            PUC-SP.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Onda inferior -->
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Cases/Resultados -->
+    <section class="cases" id="cases">
+        <!-- Onda superior -->
+        <div class="wave-top" >
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="margin-bottom: 200px;">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2>Cases de Sucesso</h2>
+                <p>Resultados que demonstram nossa expertise</p>
+            </div>
+
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Redução de 95% em Ação Trabalhista</h3>
+                    <p>Defesa bem-sucedida para uma indústria do setor automotivo em ação por danos morais.</p>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Recuperação de R$ 2,5 milhões</h3>
+                    <p>Recuperação de crédito empresarial através de estratégia de execução judicial.</p>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Regularização de Condomínio</h3>
+                    <p>Processo completo de regularização de condomínio residencial com 80 unidades.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Onda inferior -->
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Seção Artigos -->
+    <section class="articles" id="artigos">
+
+        <div class="wave-top">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2>Acesse Nossos Artigos</h2>
+            </div>
+
+            <div class="articles-grid">
+                <!-- Artigos existentes (mantidos do seu código original) -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Pessoa trabalhando em home office com computador e café">
+                        <div class="article-category">Direito Trabalhista</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Home Office e a Reforma Trabalhista: Novos Desafios na Era Digital
+                        </h3>
+                        <p class="article-excerpt">Análise sobre os impactos da Lei 14.442/2022 na regulamentação do
+                            teletrabalho e os direitos dos trabalhadores remotos no pós-pandemia.</p>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> 15 Jan 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 8 min leitura
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="article-link" aria-label="Ler artigo completo sobre Home Office">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Restante dos artigos... -->
+                <!-- Mantive todos os artigos do seu código original -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Homem analisando documentos de proteção de dados em tablet">
+                        <div class="article-category">Direito Empresarial</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">LGPD nas Empresas: Como Evitar Multas de Até 2% do Faturamento</h3>
+                        <p class="article-excerpt">Guia prático sobre a implementação da Lei Geral de Proteção de Dados
+                            em pequenas e médias empresas após as recentes alterações legais.</p>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> 10 Jan 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 12 min leitura
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="article-link" aria-label="Ler artigo completo sobre LGPD">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Prédios em construção com guindaste ao fundo">
+                        <div class="article-category">Direito Imobiliário</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Novo Marco Legal do Saneamento e Seus Impactos no Setor Imobiliário
+                        </h3>
+                        <p class="article-excerpt">Como a Lei 14.026/2020 está transformando os contratos de
+                            incorporação imobiliária e as responsabilidades das construtoras.</p>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> 05 Jan 2024
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 10 min leitura
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="article-link" aria-label="Ler artigo completo sobre Marco Legal do Saneamento">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://imgs.search.brave.com/lTzgaMCM6dwvpRvXQktOOczE7-_CDKa-sDDkm_zhZ5o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS90ZW5kZW5jaWFz/LWRlLW1vZWRhLXZp/cnR1YWwtY29tLXRl/bmRlbmNpYXMtZG8t/bWVyY2Fkby1kZS1j/cmlwdG9tb2VkYXNf/MTI3NzE4Ny0yMzE4My5qcGc_c2VtdD1h/aXNfaHlicmlkJnc9/NzQwJnE9ODA"
+                            alt="Representação visual de criptomoedas com gráficos digitais">
+                        <div class="article-category">Direito Digital</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Criptomoedas e Tributação: O Que Mudou com a Instrução Normativa RFB
+                            2.118/2022</h3>
+                        <p class="article-excerpt">Análise detalhada sobre a nova regulamentação de criptoativos no
+                            Brasil e suas implicações fiscais para investidores e exchanges.</p>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> 28 Dez 2023
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 15 min leitura
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="article-link" aria-label="Ler artigo completo sobre Criptomoedas">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Painéis solares em campo com árvores ao fundo">
+                        <div class="article-category">Direito Ambiental</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">ESG na Prática: Como as Empresas Podem se Preparar para a Lei de
+                            Mudanças Climáticas</h3>
+                        <p class="article-excerpt">Estudo sobre o PL 2.148/2023 e seus requisitos obrigatórios de
+                            relatórios de sustentabilidade para empresas de capital aberto.</p>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> 20 Dez 2023
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 14 min leitura
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="article-link" aria-label="Ler artigo completo sobre ESG">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Código de programação e tecnologia blockchain">
+                        <div class="article-category">Direito Contratual</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Contratos Inteligentes (Smart Contracts) no Novo Código Civil:
+                            Validade Jurídica e Aplicações</h3>
+                        <p class="article-excerpt">Análise da validade jurídica dos contratos automatizados via
+                            blockchain à luz das recentes decisões do STJ e suas aplicações práticas.</p>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar"></i> 15 Dez 2023
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i> 18 min leitura
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="article-link" aria-label="Ler artigo completo sobre Smart Contracts">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section class="contact" id="contato">
+        <!-- Onda superior -->
+        <div class="wave-top">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <h2>Entre em Contato</h2>
+                        <p>Estamos prontos para ajudar com sua questão jurídica</p>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000 - Bela Vista<br>São Paulo - SP, 01310-100</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(11) 9999-9999</p>
+                                <p>(11) 8888-8888 (WhatsApp)</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>contato@advocacia.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Seu nome completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Telefone/WhatsApp" required>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="" disabled selected>Selecione o assunto</option>
+                                <option value="civil">Direito Civil</option>
+                                <option value="trabalhista">Direito Trabalhista</option>
+                                <option value="empresarial">Direito Empresarial</option>
+                                <option value="imobiliario">Direito Imobiliário</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Descreva brevemente sua situação"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" required>
+                                <span>Concordo com a <a href="#">Política de Privacidade</a></span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Onda inferior -->
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Advocacia & Associados</h3>
+                    <p>Excelência jurídica com compromisso e resultados. Atuando há mais de 20 anos na defesa dos
+                        interesses de nossos clientes.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#areas">Áreas de Atuação</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Áreas de Especialização</h3>
+                    <ul>
+                        <li><a href="#civil">Direito Civil</a></li>
+                        <li><a href="#trabalhista">Direito Trabalhista</a></li>
+                        <li><a href="#empresarial">Direito Empresarial</a></li>
+                        <li><a href="#imobiliario">Direito Imobiliário</a></li>
+                        <li><a href="#digital">Direito Digital</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Inscreva-se para receber atualizações jurídicas.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Advocacia & Associados. Todos os direitos reservados. OAB/SP
+                    123.456</p>
+                <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão do WhatsApp -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Adicione este script ao seu arquivo script.js ou mantenha aqui
+        document.addEventListener('DOMContentLoaded', function() {
+            // Atualiza o ano atual no footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Menu mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    menuToggle.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+            
+            // Fecha menu ao clicar em um link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    if (menuToggle) {
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
+            });
+            
+            // Formulário de contato
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
