@@ -11,8 +11,10 @@
     --warning: #ffaa00;
     --danger: #ff3366;
     
-    --font-primary: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    /* Fontes atualizadas para ambiente tecnológico */
+    --font-primary: 'Space Grotesk', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-heading: 'Rajdhani', 'Space Grotesk', sans-serif;
     
     --border-radius: 12px;
     --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -65,14 +67,17 @@ section {
 }
 
 h1, h2, h3, h4 {
+    font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .highlight {
     color: var(--primary);
     position: relative;
     display: inline-block;
+    font-weight: 600;
 }
 
 .highlight::after {
@@ -95,20 +100,23 @@ h1, h2, h3, h4 {
 
 .section-subtitle {
     display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
     color: var(--primary);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 15px;
     background: rgba(0, 234, 255, 0.1);
     padding: 6px 15px;
     border-radius: 30px;
+    border: 1px solid rgba(0, 234, 255, 0.2);
 }
 
 .section-title {
     font-size: 2.8rem;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 .section-line {
@@ -120,10 +128,12 @@ h1, h2, h3, h4 {
 }
 
 .section-description {
+    font-family: var(--font-primary);
     font-size: 1.1rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 /* ===== BUTTONS ===== */
@@ -133,6 +143,7 @@ h1, h2, h3, h4 {
     justify-content: center;
     gap: 10px;
     padding: 14px 28px;
+    font-family: var(--font-heading);
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
@@ -143,6 +154,7 @@ h1, h2, h3, h4 {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    letter-spacing: 0.5px;
 }
 
 .btn::before {
@@ -164,6 +176,7 @@ h1, h2, h3, h4 {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: var(--dark);
+    font-weight: 700;
 }
 
 .btn-primary:hover {
@@ -175,6 +188,7 @@ h1, h2, h3, h4 {
     background: transparent;
     border-color: var(--primary);
     color: var(--primary);
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
@@ -186,6 +200,7 @@ h1, h2, h3, h4 {
     background: transparent;
     border-color: rgba(255, 255, 255, 0.2);
     color: var(--text);
+    font-family: var(--font-primary);
 }
 
 .btn-outline:hover {
@@ -213,18 +228,16 @@ h1, h2, h3, h4 {
 }
 
 .header {
-    position: fixed; 
+    position: fixed;
     width: 100%;
     top: 0;
-    width: 100%;
     z-index: 1000;
     padding: 20px 0;
     transition: var(--transition);
-    background: rgba(10, 10, 10, 0.9);
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 
 .nav {
     display: flex;
@@ -247,11 +260,14 @@ h1, h2, h3, h4 {
     font-family: var(--font-mono);
     font-size: 24px;
     color: var(--primary);
+    font-weight: 700;
 }
 
 .logo-text {
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 20px;
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
@@ -268,11 +284,13 @@ h1, h2, h3, h4 {
 .nav-link {
     color: var(--text);
     text-decoration: none;
-    font-weight: 500;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 16px;
     position: relative;
     padding: 5px 0;
     transition: var(--transition);
+    letter-spacing: 0.3px;
 }
 
 .nav-link::after {
@@ -297,6 +315,7 @@ h1, h2, h3, h4 {
 
 .nav-link.active {
     color: var(--primary);
+    font-weight: 700;
 }
 
 .nav-btns {
@@ -321,6 +340,7 @@ h1, h2, h3, h4 {
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
+    font-family: var(--font-heading);
     font-weight: 600;
     transition: var(--transition);
 }
@@ -344,26 +364,20 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-
-.badge {
-    display: inline-block;
-    background: rgba(0, 234, 255, 0.1);
-    color: var(--primary);
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
 .home-title {
+    font-family: var(--font-heading);
     font-size: 3.5rem;
     margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
 .home-description {
+    font-family: var(--font-primary);
     font-size: 1.2rem;
     color: var(--text-light);
     margin-bottom: 30px;
+    line-height: 1.7;
 }
 
 .home-btns {
@@ -383,6 +397,7 @@ h1, h2, h3, h4 {
 }
 
 .stat-number {
+    font-family: var(--font-mono);
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
@@ -390,6 +405,7 @@ h1, h2, h3, h4 {
 }
 
 .stat-label {
+    font-family: var(--font-primary);
     font-size: 14px;
     color: var(--text-light);
     margin-top: 5px;
@@ -438,6 +454,13 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.card-header span {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
 .dots {
     display: flex;
     gap: 8px;
@@ -463,6 +486,7 @@ h1, h2, h3, h4 {
     font-size: 12px;
     color: var(--text-light);
     overflow-x: auto;
+    line-height: 1.5;
 }
 
 .design-preview {
@@ -578,13 +602,17 @@ h1, h2, h3, h4 {
 }
 
 .tech-item span {
+    font-family: var(--font-mono);
     font-size: 12px;
     color: var(--text-light);
+    font-weight: 500;
 }
 
 .about-title {
+    font-family: var(--font-heading);
     font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 .about-text {
@@ -594,6 +622,8 @@ h1, h2, h3, h4 {
 .about-text p {
     margin-bottom: 15px;
     color: var(--text-light);
+    font-family: var(--font-primary);
+    line-height: 1.7;
 }
 
 .about-features {
@@ -618,16 +648,20 @@ h1, h2, h3, h4 {
     justify-content: center;
     color: var(--primary);
     font-size: 20px;
+    flex-shrink: 0;
 }
 
 .feature-content h4 {
     margin-bottom: 5px;
     font-size: 18px;
+    font-family: var(--font-heading);
+    font-weight: 700;
 }
 
 .feature-content p {
     color: var(--text-light);
     font-size: 14px;
+    font-family: var(--font-primary);
 }
 
 .skills-container {
@@ -638,13 +672,17 @@ h1, h2, h3, h4 {
 }
 
 .skills-title {
+    font-family: var(--font-heading);
     font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 .skills-description {
     color: var(--text-light);
     margin-bottom: 30px;
+    font-family: var(--font-primary);
+    line-height: 1.7;
 }
 
 .skill-tags {
@@ -660,7 +698,8 @@ h1, h2, h3, h4 {
     background: var(--dark-light);
     padding: 8px 16px;
     border-radius: 30px;
-    font-size: 14px;
+    font-family: var(--font-mono);
+    font-size: 13px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
 }
@@ -745,8 +784,10 @@ h1, h2, h3, h4 {
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    font-size: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
     color: var(--text-light);
+    font-weight: 500;
 }
 
 .projects-grid {
@@ -794,9 +835,11 @@ h1, h2, h3, h4 {
     color: var(--primary);
     padding: 5px 12px;
     border-radius: 30px;
-    font-size: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
     font-weight: 600;
     z-index: 2;
+    letter-spacing: 0.5px;
 }
 
 .project-placeholder {
@@ -857,14 +900,18 @@ h1, h2, h3, h4 {
 }
 
 .project-title {
+    font-family: var(--font-heading);
     font-size: 1.3rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .project-description {
     color: var(--text-light);
     margin-bottom: 20px;
     font-size: 14px;
+    font-family: var(--font-primary);
+    line-height: 1.6;
 }
 
 .project-tech {
@@ -879,7 +926,8 @@ h1, h2, h3, h4 {
     color: var(--primary);
     padding: 4px 12px;
     border-radius: 30px;
-    font-size: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
     font-weight: 500;
 }
 
@@ -890,6 +938,7 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
     font-size: 14px;
     color: var(--text-light);
+    font-family: var(--font-mono);
 }
 
 .status-dot {
@@ -916,7 +965,6 @@ h1, h2, h3, h4 {
 
 .contact-info {
     display: flex;
-    /* flex-direction: column; */
     gap: 20px;
 }
 
@@ -947,14 +995,18 @@ h1, h2, h3, h4 {
 }
 
 .contact-content h4 {
+    font-family: var(--font-heading);
     font-size: 1.2rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .contact-content p {
     color: var(--text-light);
     font-size: 14px;
     margin-bottom: 15px;
+    font-family: var(--font-primary);
+    line-height: 1.6;
 }
 
 .contact-link {
@@ -963,8 +1015,10 @@ h1, h2, h3, h4 {
     gap: 8px;
     color: var(--primary);
     text-decoration: none;
+    font-family: var(--font-mono);
     font-weight: 500;
     transition: var(--transition);
+    font-size: 15px;
 }
 
 .contact-link:hover {
@@ -979,8 +1033,10 @@ h1, h2, h3, h4 {
 }
 
 .form-title {
+    font-family: var(--font-heading);
     font-size: 1.8rem;
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .form-group {
@@ -1033,13 +1089,16 @@ h1, h2, h3, h4 {
     color: var(--text-light);
     font-size: 14px;
     line-height: 1.6;
+    font-family: var(--font-primary);
 }
 
 .footer-links h4,
 .footer-tech h4 {
+    font-family: var(--font-heading);
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: var(--primary);
+    font-weight: 700;
 }
 
 .footer-links ul {
@@ -1055,6 +1114,7 @@ h1, h2, h3, h4 {
     text-decoration: none;
     transition: var(--transition);
     font-size: 14px;
+    font-family: var(--font-primary);
 }
 
 .footer-links a:hover {
@@ -1073,7 +1133,9 @@ h1, h2, h3, h4 {
     color: var(--text-light);
     padding: 6px 12px;
     border-radius: 30px;
+    font-family: var(--font-mono);
     font-size: 12px;
+    font-weight: 500;
 }
 
 .footer-bottom {
@@ -1082,7 +1144,8 @@ h1, h2, h3, h4 {
     align-items: center;
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 14px;
+    font-family: var(--font-mono);
+    font-size: 13px;
     color: var(--text-light);
 }
 
