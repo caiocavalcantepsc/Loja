@@ -127,9 +127,10 @@ section {
 .logo::after {
     content: '👑';
     position: absolute;
-    top: -5px;
-    right: -25px;
-    font-size: 1.5rem;
+    top: -10px;
+    right: -10px;
+    font-size: 1.2rem;
+    transform: rotate(22deg);
 }
 
 .logo span {
@@ -788,6 +789,26 @@ section {
 .social-link:hover {
     background-color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all .7s;
+    transform: translateX(-100%);
+}
+
+.hidden-blurless {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all .7s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
 }
 
 /* RESPONSIVE DESIGN - STREETWEAR */
